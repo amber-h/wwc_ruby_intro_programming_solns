@@ -40,7 +40,7 @@
 <pre><code>cd 00_hello
 </code></pre>
 
-<p>This directory is the starting point for this exercise. It contains a spec file and you'll be adding a ruby file to (eventually) make the specs pass.</p>
+<p>This directory is the starting point for this exercise. It contains the file and you'll be adding ruby code to to (eventually) make the specs pass.</p>
 
 <h2>Run the test</h2>
 
@@ -49,23 +49,7 @@
 
 <h2>Watch it fail</h2>
 
-<p>You should see an error. <strong>Don't get scared!</strong> Try to read it and figure out what the computer wants to tell you. Somewhere on the first line it should say something like</p>
-
-<pre><code>no such file to load -- test-first-teaching/hello/hello (LoadError)
-</code></pre>
-
-<p>That means that it is looking for a file called <code>hello.rb</code> and can't find it.</p>
-
-<h2>Create hello.rb</h2>
-
-<p>Open up <code>hello.rb</code> in a text editor. Save it. Run the test again.</p>
-
-<pre><code>rake
-</code></pre>
-
-<h2>Watch it fail</h2>
-
-<p>Now you should see an error like this:</p>
+<p>You should see an error. <strong>Don't get scared!</strong> Try to read it and figure out what the computer wants to tell you. Somewhere you should see an error like this:</p>
 
 <pre><code>the hello function
   says hello (FAILED - 1)
@@ -152,8 +136,8 @@ the greet function
 
 <p>In order to get the next test to pass, your function will need to accept an <em>argument</em>.</p>
 
-<pre><code>def greet(who)
-  "Hello, #{who}!"
+<pre><code>def greet(name)
+  "Hello, #{name}!"
 end
 </code></pre>
 </div>
@@ -173,8 +157,8 @@ describe &quot;the greet function&quot; do
     greet(&quot;Alice&quot;).should == &quot;Hello, Alice!&quot;
   end
 
-  it &quot;says hello to someone else&quot; do
-    greet(&quot;Bob&quot;).should == &quot;Hello, Bob!&quot;
+  it &quot;tells someone their age&quot; do
+    calculate_age(1992).should == 23
   end
 end</pre>
   </div>
